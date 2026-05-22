@@ -24,5 +24,5 @@ Implementasi antarmuka pengguna (UI) secara penuh akan dieksekusi di Figma.
 
 \*\*Link Mockup Figma:\*\*
 
-https://www.figma.com/design/gIAIrtDcoX5v2Ky9NlrBRF/Untitled?node-id=0-1\&t=KamCHRfXJuKutauI-1
+https://www.figma.com/design/9uhs3hK29wrGbpPYXW4b7T/workspace-nazwa?node-id=186-700&t=V4llCFgGEqAYBSbf-1
 
