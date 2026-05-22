@@ -1,2 +1,1 @@
-# Model Prediksi Kemiskinan Berbasis Machine Learning untuk Mendukung Intervensi Kebijakan Daerah 
-Aplikasi multi-platform berbasis Machine Learning yang dirancang untuk memprediksi probabilitas tingkat kemiskinan di lingkup desa. Sistem ini menganalisis berbagai indikator lokal seperti infrastruktur, ekonomi, dan fasilitas sosial untuk menghasilkan skor probabilitas. Tujuan utama proyek ini adalah menyediakan data analitik pendukung bagi pemerintah daerah agar kebijakan intervensi dan penyaluran bantuan dapat dilakukan secara lebih presisi dan tepat sasaran. 
+ 
