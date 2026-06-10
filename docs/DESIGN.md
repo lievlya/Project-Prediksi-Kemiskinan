@@ -1,7 +1,7 @@
 # Blueprint & Desain Sistem: Project-Prediksi-Kemiskinan
 
 ## 1. Ide Besar & Deskripsi Aplikasi
-Sistem digital terintegrasi yang berfungsi untuk mengelola dan menganalisis data indikator sosial-ekonomi menggunakan pendekatan *Machine Learning*. [cite_start]Aplikasi ini dirancang sebagai dokumen perancangan utama (*Design Phase*) untuk merangkum arah pengembangan proyek[cite: 517, 521, 586, 590]. Kehadiran platform ini ditujukan untuk memetakan dan memprediksi tingkat kemiskinan wilayah guna mendukung efisiensi serta akurasi pengambilan kebijakan intervensi oleh pemerintah daerah.
+Sistem digital terintegrasi yang berfungsi untuk mengelola dan menganalisis data indikator sosial-ekonomi menggunakan pendekatan *Machine Learning*. Aplikasi ini dirancang sebagai dokumen perancangan utama (*Design Phase*) untuk merangkum arah pengembangan proyek. Kehadiran platform ini ditujukan untuk memetakan dan memprediksi tingkat kemiskinan wilayah guna mendukung efisiensi serta akurasi pengambilan kebijakan intervensi oleh pemerintah daerah.
 
 ## 2. Panduan Visual & Aturan Antarmuka
 Untuk menjamin konsistensi produk dan pengalaman pengguna yang profesional, seluruh implementasi visual antarmuka wajib mematuhi parameter arsitektur berikut:
@@ -10,7 +10,7 @@ Untuk menjamin konsistensi produk dan pengalaman pengguna yang profesional, selu
 * **Restriksi Visual:** Antarmuka harus berorientasi pada fungsionalitas tingkat tinggi. Dilarang keras mengimplementasikan elemen dekoratif yang tidak efisien atau usang seperti penggunaan *navbar* kapsul maupun logo gantung.
 
 ## 3. Cetak Biru Kerangka Halaman Utama
-[cite_start]Sebagai panduan formal bagi pengembang antarmuka, sistem ini mengintegrasikan minimal tiga halaman utama sebagai fondasi aplikasi[cite: 528, 597]:
+Sebagai panduan formal bagi pengembang antarmuka, sistem ini mengintegrasikan minimal tiga halaman utama sebagai fondasi aplikasi:
 
 ### A. Halaman Landing Page
 * **Navbar:** Memuat logo aplikasi, menu navigasi utama (Beranda, Tentang, Kontak), serta tombol aksi "Masuk".
@@ -30,5 +30,5 @@ Untuk menjamin konsistensi produk dan pengalaman pengguna yang profesional, selu
 * **Tabel Analisis:** Komponen tabel terstruktur untuk menyajikan daftar hasil analisis prediksi kemiskinan berdasarkan tabulasi daerah.
 
 ## 4. Tautan Prototipe Desain (Mockup UI)
-[cite_start]Dokumentasi desain interaktif dan spesifikasi visual lengkap yang disepakati untuk proyek ini dapat diakses secara langsung melalui tautan Figma berikut:
-https://www.figma.com/design/9uhs3hK29wrGbpPYXW4b7T/workspace-nazwa?node-id=186-700&t=V4llCFgGEqAYBSbf-1
+Dokumentasi desain interaktif dan spesifikasi visual lengkap yang disepakati untuk proyek ini dapat diakses secara langsung melalui tautan Figma berikut:
+https://www.figma.com/design/gIAIrtDcoX5v2Ky9NlrBRF/Untitled?node-id=0-1&t=KamCHRfXJuKutauI-1
