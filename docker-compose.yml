@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  web-app:
+    build: .
+    ports:
+      - "5000:5000"
+    environment:
+      - APP_ENV=production
+    volumes:
+      - ./logs:/app/logs          # Bind Mount untuk log
+      - shared-storage:/app/data  # Penugasan Individu: Named Volume
+    networks:
+      - mvc-network
+
+  db-server:
+    image: postgres:15-alpine
+    environment:
+      - POSTGRES_PASSWORD=rahasia
+    volumes:
+      - db-data:/var/lib/postgresql/data # Named Volume untuk DB
+    networks:
+      - mvc-network
+
+volumes:
+  db-data:          # Definisi named volume global[cite: 1]
+  shared-storage:   # Penugasan Individu: Named Volume global[cite: 1]
+
+networks:
+  mvc-network:
+    driver: bridge
