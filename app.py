@@ -2,6 +2,8 @@ import streamlit as st
 import pandas as pd
 import numpy as np
 import requests  # Digunakan sebagai pengganti fetch/axios di Python
+import os
+import streamlit as st
 
 # --- CONFIG HALAMAN ---
 st.set_page_config(page_title="Prediksi Kemiskinan", layout="wide")
