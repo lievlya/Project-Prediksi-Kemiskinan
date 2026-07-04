@@ -1,0 +1,20 @@
+# Rahasia & konfigurasi lokal - JANGAN pernah di-push ke GitHub
+.env
+.streamlit/secrets.toml
+
+# Python
+__pycache__/
+*.pyc
+*.log
+venv/
+env/
+.venv/
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# (Opsional - diskusikan dengan tim) file model besar biasanya di-ignore
+# jika di-deploy lewat cloud storage terpisah, bukan lewat Git:
+# models/*.pkl
