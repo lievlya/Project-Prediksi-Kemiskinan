@@ -1,0 +1,35 @@
+version: '3.8'
+
+services:
+  # --- LAYANAN FRONTEND (STREAMLIT) ---
+  frontend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: streamlit_frontend
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://backend:8000/predict
+    volumes:
+      # 1. BIND MOUNT (Instruksi Minggu 13):
+      # Menghubungkan folder 'assets' di laptopmu ke folder '/app/assets' di dalam Docker container
+      - ./assets:/app/assets
+    depends_on:
+      - backend
+
+  # --- LAYANAN BACKEND (API & MODEL ML) ---
+  backend:
+    image: python:3.10-slim
+    container_name: fastapi_backend
+    # (Ini hanya contoh representasi, sesuaikan command/ports dengan spek dari tim Backend-mu)
+    ports:
+      - "8000:8000"
+    volumes:
+      # 2. NAMED VOLUME (Instruksi Minggu 13):
+      # Menyimpan database atau model log agar data demo tersimpan permanen di volume 'backend_data'
+      - backend_data:/app/data
+
+# --- DEKLARASI NAMED VOLUMES ---
+volumes:
+  backend_data:
