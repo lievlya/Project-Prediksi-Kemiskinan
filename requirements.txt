@@ -1,7 +1,0 @@
-streamlit
-scikit-learn
-pandas
-joblib
-python-dotenv
-flask
-flask-cors
