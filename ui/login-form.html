@@ -1,1 +1,21 @@
 # File Login Frontend 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Page</title>
+</head>
+<body>
+    <h2>Halaman Login</h2>
+    <!-- Tombol untuk memicu koneksi ke Backend -->
+    <button id="btn-cek-api">Cek Status API</button>
+    <p id="status-text"></p>
+
+    <!-- Memanggil file app.js -->
+    <script src="app.js"></script>
+    <script>
+        document.getElementById('btn-cek-api').addEventListener('click', checkApiStatus);
+    </script>
+</body>
+</html>

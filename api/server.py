@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 load_dotenv()
 
 app = Flask(__name__)
-CORS(app, resources={r"/api/*": {"origins": "http://localhost:8501"}})
+CORS(app, resources={r"/api/*": {"origins": "*"}})
 
 # --- TUGAS INDIVIDU: BACA APP_ENV ---
 # Membaca environment variable APP_ENV, default ke 'development' jika tidak diatur
