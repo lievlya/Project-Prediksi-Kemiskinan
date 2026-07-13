@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  # --- LAYANAN UI PRODUCTION ---
+  frontend-prod:
+    image: ghcr.io/lievlya/project-prediksi-kemiskinan-fe:v1.0.0
+    container_name: kemiskinan_fe_prod
+    ports:
+      - "80:8501" # Mengalihkan port default 8501 ke port HTTP standar (80) untuk produksi
+    environment:
+      - API_URL=http://backend-prod:8000/predict
+    restart: always
+
+  # --- LAYANAN API PRODUCTION ---
+  backend-prod:
+    image: ghcr.io/lievlya/project-prediksi-kemiskinan-be:v1.0.0 # Image BE dari tim backend
+    container_name: kemiskinan_be_prod
+    ports:
+      - "8000:8000"
+    restart: always
