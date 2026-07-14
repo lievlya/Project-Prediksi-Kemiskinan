@@ -13,8 +13,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Menyalin seluruh kode proyek ke direktori kerja kontainer
 COPY . .
 
-# MENENTUKAN VARIABEL ALAMAT API (Instruksi Minggu 12)
-ENV API_URL=http://127.0.0.1:8000/predict
+# 🔥 PERBAIKAN: Hubungkan ke service 'backend' di jaringan Docker Compose, bukan 127.0.0.1
+ENV API_URL=http://backend:5000/predict
 
 # Membuka port default Streamlit (8501)
 EXPOSE 8501
