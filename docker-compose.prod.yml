@@ -1,20 +1,23 @@
-version: '3.8'
-
 services:
   # --- LAYANAN UI PRODUCTION ---
   frontend-prod:
     image: ghcr.io/lievlya/project-prediksi-kemiskinan-fe:v1.0.0
     container_name: kemiskinan_fe_prod
     ports:
-      - "80:8501" # Mengalihkan port default 8501 ke port HTTP standar (80) untuk produksi
+      - "80:8501"
     environment:
+      # PENTING: Nama host harus SAMA dengan nama service backend di bawah
       - API_URL=http://backend-prod:8000/predict
+    command: ["streamlit", "run", "app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+    depends_on:
+      - backend-prod
     restart: always
 
   # --- LAYANAN API PRODUCTION ---
   backend-prod:
-    image: ghcr.io/lievlya/project-prediksi-kemiskinan-be:v1.0.0 # Image BE dari tim backend
+    image: ghcr.io/lievlya/project-prediksi-kemiskinan-be:v1.0.0
     container_name: kemiskinan_be_prod
+    # Pastikan aplikasi backendmu berjalan di port 8000 di dalam kontainer
     ports:
       - "8000:8000"
     restart: always
