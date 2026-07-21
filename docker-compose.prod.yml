@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    image: ghcr.io/lievlya/project-prediksi-kemiskinan-be:v1.0.0
+    container_name: backend-prod
+    restart: always
+    ports:
+      - "5000:5000"
+    env_file:
+      - .env.production
+    depends_on:
+      - db
+
+  frontend:
+    image: ghcr.io/lievlya/project-prediksi-kemiskinan-fe:v1.0.0
+    container_name: frontend-prod
+    restart: always
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env.production
+    depends_on:
+      - backend
+
+  db:
+    image: postgres:15-alpine
+    container_name: db-prod
+    restart: always
+    environment:
+      POSTGRES_DB: kemiskinan_db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - db-data:/var/lib/postgresql/data
+
+volumes:
+  db-data:
